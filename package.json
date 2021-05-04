@@ -1,0 +1,23 @@
+{
+  "name": "story-prompt",
+  "version": "1.0.0",
+  "description": "Thanks for doing this project as part of your interview process. We appreciate your time and want to make this a fun experience. If you have any questions at all, please reach out to us and we'll get back to you.",
+  "main": "start.js",
+  "scripts": {
+    "start": "node start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mlndz-la/story-prompt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mlndz-la/story-prompt/issues"
+  },
+  "homepage": "https://github.com/mlndz-la/story-prompt#readme",
+  "dependencies": {
+    "prompt-async": "^0.9.9"
+  }
+}
