@@ -1,4 +1,7 @@
 // one reference to the location of the db
 const filepath = "./records.json";
 
-module.exports = { filepath };
+const consoleLogEachWord = (arrayOfWords) =>
+  arrayOfWords.forEach((word) => console.log(word));
+
+module.exports = { filepath, consoleLogEachWord };
