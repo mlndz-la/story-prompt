@@ -1,5 +1,4 @@
 const prompt = require("prompt-async");
-
 const playAGame = require("./play.js");
 
 const properties = {
