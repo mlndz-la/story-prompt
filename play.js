@@ -2,7 +2,8 @@ const prompt = require("prompt-async");
 const fs = require("fs");
 const { filepath } = require("./utils.js");
 
-const regexString = /^[a-zA-Z\s\-]+$/;
+const regexString = /^[a-zA-Z]{1,15}$/;
+const regexPlace = /^[a-zA-Z\s\-]{1,15}$/;
 const regexNumber = /^[0-9]*$/;
 const properties = [
   {
@@ -17,28 +18,28 @@ const properties = [
     name: "INPUT_UNIT_OF_MEASURE",
     validator: regexString,
     message: "Enter a unit of measure",
-    warning: "Please enter a unit of measurement.\n",
+    warning: "Please enter a unit of measurement between 2-15 characters.\n",
     required: true,
   },
   {
     name: "INPUT_PLACE",
-    validator: regexString,
+    validator: regexPlace,
     message: "Enter a place",
-    warning: "Please enter a place.\n",
+    warning: "Please enter a place between 2-15 characters.\n",
     required: true,
   },
   {
     name: "INPUT_ADJECTIVE",
     validator: regexString,
     message: "Enter an adjective",
-    warning: "Please enter an adjective.\n",
+    warning: "Please enter an adjective between 2-15 characters.\n",
     required: true,
   },
   {
     name: "INPUT_NOUN",
     validator: regexString,
     message: "Enter a noun",
-    warning: "Please enter a noun.\n",
+    warning: "Please enter a noun between 2-15 characters.\n",
     required: true,
   },
 ];
