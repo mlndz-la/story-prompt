@@ -1,18 +1,19 @@
 const prompt = require("prompt-async");
 const playAGame = require("./play.js");
+const showStats = require("./stats.js");
 
-const properties = {
-  name: "option",
+const properties = [{
+  name: "INPUT_OPTION",
   message:
     "\nWhat would you like to do?\n1. Play a game\n2. Show Stats\n3. Quit\nInsert choice here",
-};
+}];
+
+prompt.start();
 
 const startScript = async () => {
-  prompt.start();
+  const { INPUT_OPTION } = await prompt.get(properties);
 
-  const { option } = await prompt.get([properties]);
-
-  switch (Number(option)) {
+  switch (Number(INPUT_OPTION)) {
     case 1:
       // anna game prompt
       await playAGame();
@@ -20,7 +21,8 @@ const startScript = async () => {
       break;
     case 2:
       // show the record of all played games
-      console.log("STATS");
+      await showStats();
+      startScript();
       break;
     case 3:
       // exit the application
