@@ -80,8 +80,14 @@ const playAGame = async () => {
   } else {
     // create file
     // add new data
-    const json = `{ "numbers": [${INPUT_NUMBER}], "unitOfMeasurements": ["${INPUT_UNIT_OF_MEASURE}"], "places": ["${INPUT_PLACE}"], "adjectives": ["${INPUT_ADJECTIVE}"], "nouns": ["${INPUT_NOUN}"] }`;
-    fs.writeFileSync(filepath, json);
+    const obj = {
+      numbers: [INPUT_NUMBER],
+      unitOfMeasurements: [INPUT_UNIT_OF_MEASURE],
+      places: [INPUT_PLACE],
+      adjectives: [INPUT_ADJECTIVE],
+      nouns: [INPUT_NOUN],
+    };
+    fs.writeFileSync(filepath, JSON.stringify(obj));
   }
 
   console.log(
