@@ -37,7 +37,7 @@ const showStats = async () => {
       console.log("");
       break;
     default:
-      console.log("That's not a 1, 2, 3 or 4. Try again.\n");
+      console.log("\nThat's not a 1, 2, 3 or 4. Try again.\n");
       await showStats();
       break;
   }
