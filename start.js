@@ -34,7 +34,7 @@ const startScript = async () => {
       break;
     default:
       // incorrect input
-      console.log("That's not a 1, 2 or 3. Try again.\n");
+      console.log("\nThat's not a 1, 2 or 3. Try again.\n");
       startScript();
       break;
   }
