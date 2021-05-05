@@ -1,9 +1,9 @@
 const prompt = require("prompt-async");
 const fs = require("fs");
+const { filepath } = require("./utils.js");
 
 const regexString = /^[a-zA-Z\s\-]+$/;
 const regexNumber = /^[0-9]*$/;
-const filepath = "records.json";
 const properties = [
   {
     name: "INPUT_NUMBER",
