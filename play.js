@@ -2,15 +2,15 @@ const prompt = require("prompt-async");
 const fs = require("fs");
 const { filepath } = require("./utils.js");
 
-const regexString = /^[a-zA-Z]{1,15}$/;
-const regexPlace = /^[a-zA-Z\s\-]{1,15}$/;
-const regexNumber = /^[0-9]*$/;
+const regexString = /^[a-zA-Z]{2,15}$/;
+const regexPlace = /^[a-zA-Z\s\-]{2,15}$/;
+const regexNumber = /^(?!(0))[0-9]{1,15}$/;
 const properties = [
   {
     name: "INPUT_NUMBER",
     message: "Enter a number",
     validator: regexNumber,
-    warning: "Please enter a number.\n",
+    warning: "Please enter a number and not only a single or multiple zeros.\n",
     required: true,
     before: (value) => Number(value),
   },
